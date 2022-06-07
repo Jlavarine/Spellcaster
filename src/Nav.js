@@ -1,9 +1,9 @@
 import React from 'react'
-
+import './Nav.css'
 const Nav = () => {
   return (
     <nav>
-      <div>
+      <div className='nav'>
         <h1>Spellcaster</h1>
         <select>
           <option value="">Please choose a class</option>

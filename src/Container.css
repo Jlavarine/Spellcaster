@@ -1,0 +1,5 @@
+.spell-container {
+  max-width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}

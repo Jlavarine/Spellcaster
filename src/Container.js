@@ -1,5 +1,6 @@
 import React from 'react'
 import Spell from './Spell'
+import './Container.css'
 const Container = ({spells}) => {
   let i = 0;
   const allSpells = spells.map(spell => {
@@ -13,7 +14,7 @@ const Container = ({spells}) => {
     )
   })
   return (
-    <div>
+    <div className='spell-container'>
       {allSpells}
     </div>
   )
