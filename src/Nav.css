@@ -1,4 +1,21 @@
+.title {
+  font-size: 50px;
+  color: #3DF6A1
+}
 .nav {
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.dropdown {
+  background-color: #F4F4F3;
+  font-size: 20px;
+}
+
+.icon {
+  height: 100px;
+  width: 100px;
 }

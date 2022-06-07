@@ -4,8 +4,9 @@ const Nav = () => {
   return (
     <nav>
       <div className='nav'>
-        <h1>Spellcaster</h1>
-        <select>
+        <img className='icon' src='https://pbs.twimg.com/profile_images/1192128304574275585/i9xPBsrE_400x400.jpg' />
+        <h1 className='title'><span className='fast'>S</span>pell<span className='slow'>c</span>aster</h1>
+        <select className='dropdown'>
           <option value="">Please choose a class</option>
           <option value="Barbarian">Barbarian</option>
           <option value="Bard">Bard</option>

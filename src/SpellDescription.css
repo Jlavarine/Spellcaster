@@ -1,0 +1,14 @@
+h2, p {
+  color: #24221C;
+  font-size: 25px;
+}
+
+.description-box {
+  margin: 0 30px 0 30px;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: #D6CCA9;
+  border: solid #bf953f 7px;
+  border-style: outset;
+}

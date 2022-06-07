@@ -29,7 +29,7 @@ class App extends Component {
     }
   })
   .then(data => this.setState({spells: data.results}))
-  .catch(error => console.log('Something went wrong!'))
+  .catch(error => console.log(error))
 }
 
   render() {
