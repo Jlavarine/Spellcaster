@@ -10,6 +10,7 @@ const Container = ({spells}) => {
         id={i += 1}
         key={i}
         url={spell.url}
+        index={spell.index}
       />
     )
   })

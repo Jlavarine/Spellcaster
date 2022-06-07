@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
+import { Route, Switch } from 'react-router-dom';
 import Nav from './Nav'
 import Container from './Container'
+import DescriptionNav from './DescriptionNav'
+import SpellDescription from './SpellDescription'
 import './App.css'
 
 class App extends Component {
@@ -32,8 +35,24 @@ class App extends Component {
   render() {
     return(
       <main className='App'>
-        <Nav />
-        <Container spells={this.state.spells} />
+        <Switch>
+          <Route exact path='/' render={() => {
+            return (
+              <div>
+                <Nav />
+                <Container spells={this.state.spells} />
+              </div>
+            )
+          }} />
+          <Route exact path='/:spell' render={({match}) => {
+            return (
+              <div>
+                <DescriptionNav />
+                <SpellDescription spell={match.params.spell}/>
+              </div>
+            )
+          }} />
+        </Switch>
       </main>
     )
   }
