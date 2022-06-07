@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import './SpellDescription.css'
 class SpellDescription extends Component {
   constructor(props) {
     super(props)
@@ -38,13 +38,11 @@ class SpellDescription extends Component {
     })
     .then(data => this.spellDescriptionCleaner(data))
     .then(data => this.setState({spell: data}))
-    .catch(error => {
-      console.log('Something went wrong!')
-  })
+    .catch(error => console.log(error))
   }
   render() {
     return (
-      <div>
+      <div className='description-box'>
         <h2>{this.state.spell.name}</h2>
         <p>Casters: {this.state.spell.casters}</p>
         <p>Components: {this.state.spell.components}</p>

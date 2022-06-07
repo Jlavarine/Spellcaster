@@ -1,0 +1,15 @@
+nav {
+  margin: 0
+}
+.page-title {
+  font-size: 50px;
+  color: #3DF6A1;
+  margin: 0
+}
+
+.home-btn {
+  border-radius: 20px;
+  width: 100px;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
