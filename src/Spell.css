@@ -1,0 +1,11 @@
+.spell {
+  height: 300px;
+  width: 300px;
+  margin-bottom: 60px;
+}
+
+.spell-image {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}

@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import Nav from './Nav'
+import Container from './Container'
+import './App.css'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+      spells: [],
+      error: ''
+    }
+  }
+
+  componentDidMount = () => {
+    this.getSpells()
+  }
+
+  getSpells = () => {
+  fetch('https://www.dnd5eapi.co/api/spells')
+  .then(resp => {
+    if(!resp.ok) {
+      this.setState({error: 'Something went wrong!'})
+    }else if(resp.ok) {
+      return resp.json()
+    }
+  })
+  .then(data => this.setState({spells: data.results}))
+  .catch(error => console.log('Something went wrong!'))
 }
 
-export default App;
+  render() {
+    return(
+      <main className='App'>
+        <Nav />
+        <Container spells={this.state.spells} />
+      </main>
+    )
+  }
+}
+export default App
