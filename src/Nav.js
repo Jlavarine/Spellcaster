@@ -5,7 +5,7 @@ const Nav = ({filterSpells, searchValue, handleChange}) => {
     <nav>
       <div className='nav'>
         <img className='icon' src='https://pbs.twimg.com/profile_images/1192128304574275585/i9xPBsrE_400x400.jpg' />
-        <h1 className='title'><span className='fast'>S</span>pell<span className='slow'>c</span>aster</h1>
+        <h1 className='title'>Spellcaster</h1>
         <form>
           <input
           className='spell-search'

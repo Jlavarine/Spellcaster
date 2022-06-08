@@ -4,6 +4,7 @@ import Nav from './Nav'
 import Container from './Container'
 import DescriptionNav from './DescriptionNav'
 import SpellDescription from './SpellDescription'
+import Error from './Error'
 import './App.css'
 
 class App extends Component {
@@ -40,6 +41,18 @@ class App extends Component {
     this.setState({searchedSpells: filteredSpells})
   }
 
+  checkForMatchingSpell = (url) => {
+    let match = [];
+    this.state.spells.forEach(spell =>  {
+      if(spell.index.toLowerCase() === url) {
+        match.push(true)
+      } else {
+        match.push(false)
+      }
+    })
+    return match.every((element) => element === false)
+  }
+
   render() {
     return(
       <main className='App'>
@@ -66,13 +79,19 @@ class App extends Component {
               </div>
             )
           }} />
-          <Route exact path='/:spell' render={({match}) => {
-            return (
-              <div>
-                <DescriptionNav />
-                <SpellDescription spell={match.params.spell}/>
-              </div>
-            )
+          <Route path='/:spell' render={({match}) => {
+            if(!this.checkForMatchingSpell(match.params.spell)) {
+              return (
+                <div>
+                  <DescriptionNav />
+                  <SpellDescription spell={match.params.spell}/>
+                </div>
+              )
+            } else {
+              return (
+                <Error />
+              )
+            }
           }} />
         </Switch>
       </main>
