@@ -13,6 +13,7 @@ class SpellDescription extends Component {
     this.getSpellDescription()
   }
   spellDescriptionCleaner = (data) => {
+    console.log(data)
     let allCasters = []
     data.classes.forEach(caster => allCasters.push(caster.name))
     let allComponents = []
@@ -43,13 +44,13 @@ class SpellDescription extends Component {
   render() {
     return (
       <div className='description-box'>
-        <h2>{this.state.spell.name}</h2>
-        <p>Casters: {this.state.spell.casters}</p>
-        <p>Components: {this.state.spell.components}</p>
-        <p>Description: {this.state.spell.description}</p>
-        <p>Casting Time: {this.state.spell.castingTime}</p>
-        <p>Range: {this.state.spell.range}</p>
-        <p>School: {this.state.spell.school}</p>
+        <h2 className='spell-name'>{this.state.spell.name}</h2>
+        <p className='casters'>Casters: {this.state.spell.casters}</p>
+        <p className='components'>Components: {this.state.spell.components}</p>
+        <p className='desc'>Description: {this.state.spell.description}</p>
+        <p className='casting-time'>Casting Time: {this.state.spell.castingTime}</p>
+        <p className='range'>Range: {this.state.spell.range}</p>
+        <p className='school'>School: {this.state.spell.school}</p>
       </div>
     )
   }
