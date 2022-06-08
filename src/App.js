@@ -11,6 +11,8 @@ class App extends Component {
     super()
     this.state = {
       spells: [],
+      searchValue: '',
+      searchedSpells: '',
       error: ''
     }
   }
@@ -30,17 +32,37 @@ class App extends Component {
   })
   .then(data => this.setState({spells: data.results}))
   .catch(error => console.log(error))
-}
+  }
+
+  handleChange = (event) => {
+    this.setState({searchValue: event.target.value})
+    const filteredSpells = this.state.spells.filter(spell =>  spell.name.toLowerCase().includes(event.target.value.toLowerCase()) === true)
+    this.setState({searchedSpells: filteredSpells})
+  }
 
   render() {
     return(
       <main className='App'>
         <Switch>
           <Route exact path='/' render={() => {
-            return (
+            if(!this.state.searchValue && !this.state.searchedSpells.length) {
+              return (
+                <div>
+                  <Nav handleChange={this.handleChange} searchValue={this.state.searchValue}/>
+                  <Container spells={this.state.spells} />
+                </div>
+              )
+            }else if (!this.state.searchedSpells.length){
+              return (
+                <div>
+                  <Nav handleChange={this.handleChange} searchValue={this.state.searchValue}/>
+                  <h2 className='no-spells-error'>Sorry! There are no spells that match your search</h2>
+                </div>
+              )
+            }else return (
               <div>
-                <Nav />
-                <Container spells={this.state.spells} />
+                <Nav handleChange={this.handleChange} searchValue={this.state.searchValue}/>
+                <Container spells={this.state.searchedSpells} />}
               </div>
             )
           }} />
