@@ -1,5 +1,13 @@
 import React, { Component } from 'react'
 import './SpellDescription.css'
+import abjuration from "./images/Abjuration.jpg";
+import conjuration from "./images/Conjuration.jpg";
+import divination from "./images/Divination.jpg";
+import enchantment from "./images/Enchantment.jpg";
+import iEvocation from "./images/Evocation.jpg";
+import illusion from "./images/Illusion.jpg";
+import necromancy from "./images/Necromancy.jpg";
+import transmutation from "./images/Transmutation.jpg";
 class SpellDescription extends Component {
   constructor(props) {
     super(props)
@@ -13,7 +21,7 @@ class SpellDescription extends Component {
     this.getSpellDescription()
   }
   spellDescriptionCleaner = (data) => {
-    console.log(data)
+    console.log(data.school.name)
     let allCasters = []
     data.classes.forEach(caster => allCasters.push(caster.name))
     let allComponents = []
@@ -44,7 +52,7 @@ class SpellDescription extends Component {
   render() {
     return (
       <div className='description-box'>
-        <h2 className='spell-name'>{this.state.spell.name}</h2>
+        <h2 className='spell-name-desc'>{this.state.spell.name}</h2>
         <p className='casters'>Casters: {this.state.spell.casters}</p>
         <p className='components'>Components: {this.state.spell.components}</p>
         <p className='desc'>Description: {this.state.spell.description}</p>
