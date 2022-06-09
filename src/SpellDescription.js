@@ -85,6 +85,9 @@ class SpellDescription extends Component {
     }
     return image
 }
+  checkIfFavorite = () => {
+    this.props.checkFavorite(this.props.spell)
+  };
 
   render() {
     return (
@@ -97,6 +100,7 @@ class SpellDescription extends Component {
           <p className='casting-time'>Casting Time: {this.state.spell.castingTime}</p>
           <p className='range'>Range: {this.state.spell.range}</p>
           <p className='school'>School: {this.state.spell.school}</p>
+          {this.props.checkFavorite(this.props.spell) && <button className='favorite-btn' onClick={() => this.props.addFavorite(this.props.spell)}>Add to favorites</button>}
         </div>
         <div className='image-box'>
           <img className='school-img' src={this.getUniqueImage()}/>

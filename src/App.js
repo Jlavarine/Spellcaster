@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import Nav from './Nav'
 import Container from './Container'
 import DescriptionNav from './DescriptionNav'
+import FavoritesNav from './FavoritesNav'
 import SpellDescription from './SpellDescription'
 import Error from './Error'
 import './App.css'
@@ -14,6 +15,7 @@ class App extends Component {
       spells: [],
       searchValue: '',
       searchedSpells: '',
+      favoritedSpells: [],
       error: ''
     }
   }
@@ -53,6 +55,24 @@ class App extends Component {
     return match.every((element) => element === false)
   }
 
+  addFavorite = (favSpell) => {
+    console.log(favSpell)
+    const favoriteSpell = this.state.spells.find(spell => spell.index === favSpell)
+    this.setState({favoritedSpells: [...this.state.favoritedSpells, favoriteSpell]})
+  }
+
+  checkFavorite = (favSpell) => {
+    let value = [];
+      this.state.favoritedSpells.forEach(element => {
+        if (element.index === favSpell) {
+          value.push(true);
+        } else {
+          value.push(false)
+        }
+      })
+    return value.every(e => e === false)
+  };
+
   render() {
     if(this.state.error) {
       return (
@@ -83,12 +103,20 @@ class App extends Component {
               </div>
             )
           }} />
+          <Route exact path='/favorites' render={() => {
+            return (
+              <div>
+                <FavoritesNav />
+                <Container spells={this.state.favoritedSpells}/>
+              </div>
+            )
+          }} />
           <Route path='/:spell' render={({match}) => {
             if(!this.checkForMatchingSpell(match.params.spell)) {
               return (
                 <div>
                   <DescriptionNav />
-                  <SpellDescription spell={match.params.spell}/>
+                  <SpellDescription spell={match.params.spell} addFavorite={this.addFavorite} checkFavorite={this.checkFavorite}/>
                 </div>
               )
             } else {

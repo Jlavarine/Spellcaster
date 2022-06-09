@@ -13,7 +13,7 @@ nav {
   margin-left: 20px;
 }
 
-.home-btn {
+.home-btn, .favorite-btn {
   border-radius: 20px;
   width: 150px;
   font-size: 25px;
