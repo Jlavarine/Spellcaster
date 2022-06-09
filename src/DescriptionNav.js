@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './DescriptionNav.css'
 const DescriptionNav = () => {
   return(
-    <nav>
+    <nav className='desc-nav'>
       <h1 className="page-title">Spellcaster</h1>
       <div className="btn-styling">
         <Link to='/'> <button className="home-btn">Home</button> </Link>

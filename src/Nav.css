@@ -1,10 +1,11 @@
 .title {
   font-size: 50px;
-  color: #3DF6A1
+  color: #C70039;
+  margin-left: 20px;
 }
 .nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
   margin-bottom: 20px;
@@ -24,4 +25,5 @@
   font-size: 20px;
   width: 190px;
   height: 25px;
+  margin-right: 20px;
 }
