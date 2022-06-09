@@ -4,7 +4,6 @@ const Nav = ({filterSpells, searchValue, handleChange}) => {
   return (
     <nav>
       <div className='nav'>
-        <img className='icon' src='https://pbs.twimg.com/profile_images/1192128304574275585/i9xPBsrE_400x400.jpg' />
         <h1 className='title'>Spellcaster</h1>
         <form>
           <input
