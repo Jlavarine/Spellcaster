@@ -89,9 +89,6 @@ class SpellDescription extends Component {
   render() {
     return (
       <section>
-        <div className='image-box'>
-          <img className='school-img' src={this.getUniqueImage()}/>
-        </div>
         <div className='description-box'>
           <h2 className='spell-name-desc'>{this.state.spell.name}</h2>
           <p className='casters'>Casters: {this.state.spell.casters}</p>
@@ -100,6 +97,9 @@ class SpellDescription extends Component {
           <p className='casting-time'>Casting Time: {this.state.spell.castingTime}</p>
           <p className='range'>Range: {this.state.spell.range}</p>
           <p className='school'>School: {this.state.spell.school}</p>
+        </div>
+        <div className='image-box'>
+          <img className='school-img' src={this.getUniqueImage()}/>
         </div>
       </section>
     )

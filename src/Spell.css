@@ -1,7 +1,7 @@
 .spell {
   height: 250px;
   width: 250px;
-  margin-bottom: 60px;
+  margin-bottom: 150px;
   margin-left: 20px;
 }
 
@@ -20,6 +20,5 @@
 
 .spell-name {
   font-size: 25px;
-  color: #D6CCA9
-;
+  color: #D6CCA9;
 }

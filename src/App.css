@@ -4,11 +4,7 @@
 }
 
 body {
-  /* background-image: url('https://t3.ftcdn.net/jpg/02/91/29/90/240_F_291299006_6kYSn0C0u9pC4vJbfNMXTLuSdUs636Nz.jpg'); */
-  object-fit: cover;
-  background-size: cover;
-  background-image: url('https://t4.ftcdn.net/jpg/03/84/36/33/360_F_384363399_bownxk2gIFVHAgJvkVHMEzVTbDPqXxey.jpg');
-
+  background-image: radial-gradient(#00322A, #025548, #053E37);
 }
 .App {
   text-align: center;
