@@ -54,7 +54,11 @@ class App extends Component {
   }
 
   render() {
-    return(
+    if(this.state.error) {
+      return (
+        <h2 className='load-error'>The spellbook is still being translated. Please refresh the page.</h2>
+      )
+    } else return(
       <main className='App'>
         <Switch>
           <Route exact path='/' render={() => {
@@ -69,7 +73,7 @@ class App extends Component {
               return (
                 <div>
                   <Nav handleChange={this.handleChange} searchValue={this.state.searchValue}/>
-                  <h2 className='no-spells-error'>Sorry! There are no spells that match your search</h2>
+                  <h2 className='no-spells-error'>Sorry! There are no spells that match your search.</h2>
                 </div>
               )
             }else return (

@@ -39,7 +39,7 @@ describe('Spell Description Page', () => {
   });
 
   it('Should be able to view the spells description', () => {
-    cy.get('.spell-name').should('have.text','Acid Arrow')
+    cy.get('.spell-name-desc').should('have.text','Acid Arrow')
     cy.get('.casters').should('have.text','Casters: Wizard')
     cy.get('.components').should('have.text','Components: V, S, M')
     cy.get('.desc').should('have.text','Description: A shimmering green arrow streaks toward a target within range and bursts in a spray of acid. Make a ranged spell attack against the target. On a hit, the target takes 4d4 acid damage immediately and 2d4 acid damage at the end of its next turn. On a miss, the arrow splashes the target with acid for half as much of the initial damage and no damage at the end of its next turn.')

@@ -27,7 +27,6 @@ describe('Mainpage', () => {
   it('Should be able to view a all elements on the main page (NAV)', () => {
     cy.get('.title').should('have.text', 'Spellcaster')
     cy.get('.spell-search').should('exist')
-    cy.get('.icon').should('have.attr', 'src').should('include', 'https://pbs.twimg.com/profile_images/1192128304574275585/i9xPBsrE_400x400.jpg')
   });
 
   it('Should be able to view a all elements on the main page (Spells)', () => {
@@ -38,25 +37,4 @@ describe('Mainpage', () => {
     cy.get('.spell-search').type('acid arrow')
     cy.get('.spell-container').children().eq(0).should('have.text', 'Acid Arrow')
   });
-
-
-  // it('Should be able to view a all elements on the main page (Spells)', () => {
-  //   cy.intercept('GET', 'https://www.dnd5eapi.co/api/spells', {
-  //     statusCode: 200,
-  //     body: {
-  //       results: [
-  //         {
-  //           "index": "acid-arrow",
-  //           "name": "Acid Arrow",
-  //           "url": "/api/spells/acid-arrow"
-  //         },
-  //         {
-  //           "index": "zone-of-truth",
-  //           "name": "Zone of Truth",
-  //           "url": "/api/spells/zone-of-truth"
-  //         }
-  //       ]
-  //     }
-  //   });
-  // });
 })
