@@ -18,7 +18,7 @@ const Nav = ({filterSpells, searchValue, handleChange}) => {
           }}
           />
         </form>
-        <Link to='/favorites'><button className="favorite-btn">Favorites</button></Link>
+        <Link to='/favorites'><button className="favorites-btn">Favorites</button></Link>
       </div>
     </nav>
   )

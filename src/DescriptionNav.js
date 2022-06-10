@@ -9,7 +9,7 @@ const DescriptionNav = () => {
       </Link>
       <div className="btn-styling">
         <Link to='/'> <button className="home-btn">Home</button> </Link>
-        <Link to='/favorites'><button className="favorite-btn">Favorites</button></Link>
+        <Link to='/favorites'><button className="favorites-btn">Favorites</button></Link>
       </div>
     </nav>
   );
