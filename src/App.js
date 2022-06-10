@@ -73,6 +73,10 @@ class App extends Component {
     return value.every(e => e === false)
   };
 
+  resetSearch = () => {
+    this.setState({searchValue: '', searchedSpells: ''})
+  }
+
   render() {
     if(this.state.error) {
       return (
@@ -85,20 +89,20 @@ class App extends Component {
             if(!this.state.searchValue && !this.state.searchedSpells.length) {
               return (
                 <div>
-                  <Nav handleChange={this.handleChange} searchValue={this.state.searchValue}/>
+                  <Nav handleChange={this.handleChange} searchValue={this.state.searchValue} resetSearch={this.resetSearch}/>
                   <Container spells={this.state.spells} />
                 </div>
               )
             }else if (!this.state.searchedSpells.length){
               return (
                 <div>
-                  <Nav handleChange={this.handleChange} searchValue={this.state.searchValue}/>
+                  <Nav handleChange={this.handleChange} searchValue={this.state.searchValue} resetSearch={this.resetSearch}/>
                   <h2 className='no-spells-error'>Sorry! There are no spells that match your search.</h2>
                 </div>
               )
             }else return (
               <div>
-                <Nav handleChange={this.handleChange} searchValue={this.state.searchValue}/>
+                <Nav handleChange={this.handleChange} searchValue={this.state.searchValue} resetSearch={this.resetSearch}/>
                 <Container spells={this.state.searchedSpells} />}
               </div>
             )
@@ -106,7 +110,7 @@ class App extends Component {
           <Route exact path='/favorites' render={() => {
             return (
               <div>
-                <FavoritesNav />
+                <FavoritesNav resetSearch={this.resetSearch}/>
                 <Container spells={this.state.favoritedSpells}/>
               </div>
             )
@@ -115,7 +119,7 @@ class App extends Component {
             if(!this.checkForMatchingSpell(match.params.spell)) {
               return (
                 <div>
-                  <DescriptionNav />
+                  <DescriptionNav  resetSearch={this.resetSearch}/>
                   <SpellDescription spell={match.params.spell} addFavorite={this.addFavorite} checkFavorite={this.checkFavorite}/>
                 </div>
               )
