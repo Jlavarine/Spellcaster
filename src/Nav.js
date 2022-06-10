@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import './Nav.css'
-const Nav = ({filterSpells, searchValue, handleChange}) => {
+const Nav = ({filterSpells, searchValue, handleChange, resetSearch}) => {
   return (
     <nav>
       <div className='nav'>
@@ -18,7 +18,7 @@ const Nav = ({filterSpells, searchValue, handleChange}) => {
           }}
           />
         </form>
-        <Link to='/favorites'><button className="favorites-btn">Favorites</button></Link>
+        <Link to='/favorites'><button className="favorites-btn" onClick={resetSearch}>Favorites</button></Link>
       </div>
     </nav>
   )

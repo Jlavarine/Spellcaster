@@ -13,3 +13,9 @@ body {
   font-size: 25px;
   color: #D6CCA9;
 }
+
+.load-error {
+  font-size: 25px;
+  color: #D6CCA9;
+  text-align: center;
+}
