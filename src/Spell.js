@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import './Spell.css'
 import magic from "./images/Spellcast.jpg";
 const Spell = ({name, index, id}) => {
@@ -13,3 +14,9 @@ const Spell = ({name, index, id}) => {
   )
 }
 export default Spell
+
+Spell.propTypes = {
+  name: PropTypes.string.isRequired,
+  index: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
+};

@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import './Nav.css'
-const Nav = ({filterSpells, searchValue, handleChange, resetSearch}) => {
+const Nav = ({searchValue, handleChange, resetSearch}) => {
   return (
     <nav>
       <div className='nav'>
@@ -24,3 +25,9 @@ const Nav = ({filterSpells, searchValue, handleChange, resetSearch}) => {
   )
 }
 export default Nav
+
+Nav.propTypes = {
+  resetSearch: PropTypes.func,
+  searchValue: PropTypes.string.isRequired,
+  handleChange: PropTypes.func.isRequired,
+};

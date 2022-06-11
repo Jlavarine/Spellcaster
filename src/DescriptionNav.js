@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import './DescriptionNav.css'
 const DescriptionNav = ({resetSearch}) => {
   return(
@@ -16,3 +17,7 @@ const DescriptionNav = ({resetSearch}) => {
 };
 
 export default DescriptionNav;
+
+DescriptionNav.propTypes = {
+  resetSearch: PropTypes.func
+};

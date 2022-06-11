@@ -56,7 +56,6 @@ class App extends Component {
   }
 
   addFavorite = (favSpell) => {
-    console.log(favSpell)
     const favoriteSpell = this.state.spells.find(spell => spell.index === favSpell)
     this.setState({favoritedSpells: [...this.state.favoritedSpells, favoriteSpell]})
   }

@@ -11,8 +11,8 @@ h1, p {
 }
 
 .school-img {
-  height: 37em;
-  width: 37em;
+  height: 39em;
+  width: 39em;
   border: solid #bf953f 7px;
   border-style: outset;
 }
@@ -27,8 +27,8 @@ h1, p {
   background-color: #D6CCA9;
   border: solid #bf953f 7px;
   border-style: outset;
-  height: 37em;
-  width: 37em;
+  height: 39em;
+  width: 39em;
 }
 
 @media screen and (max-width: 1100px) {

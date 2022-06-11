@@ -1,5 +1,6 @@
 import React from 'react'
 import Spell from './Spell'
+import PropTypes from 'prop-types';
 import './Container.css'
 const Container = ({spells}) => {
   let i = 0;
@@ -21,3 +22,7 @@ const Container = ({spells}) => {
   )
 }
 export default Container
+
+Container.propTypes = {
+  spells: PropTypes.array.isRequired
+};

@@ -23,7 +23,6 @@ class SpellDescription extends Component {
     this.getSpellDescription()
   }
   spellDescriptionCleaner = (data) => {
-    console.log(data.school.name)
     let allCasters = []
     data.classes.forEach(caster => allCasters.push(caster.name))
     let allComponents = []
