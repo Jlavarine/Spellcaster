@@ -13,11 +13,11 @@ const DescriptionNav = ({resetSearch}) => {
         <Link to='/favorites'><button className="favorites-btn" onClick={resetSearch}>Favorites</button></Link>
       </div>
     </nav>
-  );
-};
+  )
+}
 
 export default DescriptionNav;
 
 DescriptionNav.propTypes = {
   resetSearch: PropTypes.func
-};
+}
