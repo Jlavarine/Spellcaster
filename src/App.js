@@ -102,7 +102,7 @@ class App extends Component {
             }else return (
               <div>
                 <Nav handleChange={this.handleChange} searchValue={this.state.searchValue} resetSearch={this.resetSearch}/>
-                <Container spells={this.state.searchedSpells} />}
+                <Container spells={this.state.searchedSpells} />
               </div>
             )
           }} />
