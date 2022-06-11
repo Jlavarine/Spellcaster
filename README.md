@@ -2,7 +2,7 @@
 
 ## Overview
 
-Spellcaster is an application that allows a user to browse through a list of spells from the 5th Edition of Dungeons and Dragons, click on the spell "cards", and view spell details, such as name, casters, components, description, casting time, range, and school. The User can also favorite spells for easier reference for their most used spells.
+Spellcaster is an application that allows a user to browse through a list of spells from the 5th Edition of Dungeons and Dragons, click on the spell "cards", view spell details, such as name, casters, components, description, casting time, range, and school, and also search for a specific spell using the search bar. The User can also favorite spells for easier reference for their most used spells.
 
 ## Deployed Page
 
@@ -38,18 +38,32 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 #### Homepage:
 - On the homepage, the user can view all of the spells from Dungeons and Dragons 5th Edition.
 - The user can click any spell to be redirected to that spell's details page.
-![Home]()
+
+
+![Spell HOME](https://user-images.githubusercontent.com/96446170/173198049-c203a693-b86c-4f80-b367-f7a03f624f8b.gif)
+
+#### Searching for a spell
+- On the homepage, the user can search all of the spells from Dungeons and Dragons 5th Edition for a specific spell.
+
+
+![Spell SEARCH](https://user-images.githubusercontent.com/96446170/173198182-86e197d7-6b53-486c-ae3f-902a0052d371.gif)
+
 
 #### Spell Details:
 - On the spell details page, user is greeted with the clicked spell's details(such as name, casters, components, description, casting time, range, and school ).
 - User can click on the home button to go back to the homepage, or the favorites button to go to the favorites page.
-![Spell Details]()
+
+![Spell Details](https://user-images.githubusercontent.com/96446170/173198130-9108a176-7a31-41a3-bae0-afef277b831a.gif)
+
 
 #### Favorited Spells:
 - On the  favorited spells page,  the user is greeted with all of their favorited spells.
 - The user can click any spell to be redirected to that spell's details page.
 - User can click on the home button to go back to the homepage.
-![Favorited Spells]()
+
+
+![Spell Favorite](https://user-images.githubusercontent.com/96446170/173198144-51e31d77-f933-4c26-bc16-a493d993fc7e.gif)
+
 
 ## Future Additions and Improvements
 
