@@ -22,7 +22,7 @@ describe ('Spellcaster favorites page', () => {
       headers: {
         'x-requested-with': 'exampleClient',
       },
-      fixture: 'spellObject2.json'
+      fixture: 'spellObject2'
     });
     cy.visit('https://spellcaster-react.herokuapp.com/')
     cy.get('.spell-image').eq(0).click()
