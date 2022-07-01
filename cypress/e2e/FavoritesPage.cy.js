@@ -22,7 +22,7 @@ describe ('Spellcaster favorites page', () => {
       headers: {
         'x-requested-with': 'exampleClient',
       },
-      fixture: 'spellObject2'
+      fixture: 'SpellObject2'
     });
     cy.visit('http://localhost:3000/')
     cy.get('.spell-image').eq(0).click()
