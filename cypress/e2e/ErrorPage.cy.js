@@ -5,7 +5,7 @@ describe ('Spellcaster error-handling', () => {
         headers: {
           'x-requested-with': 'exampleClient',
         },
-        fixture: 'spellObject1'
+        fixture: 'spellObject1.json'
       });
       cy.visit('http://localhost:3000/')
       cy.get('.load-error').should('have.text','The spellbook is still being translated. Please refresh the page.')
@@ -17,7 +17,7 @@ describe ('Spellcaster error-handling', () => {
         headers: {
           'x-requested-with': 'exampleClient',
         },
-        fixture: 'spellObject1'
+        fixture: 'spellObject1.json'
       });
       cy.visit('http://localhost:3000/')
       cy.get('.load-error').should('have.text','The spellbook is still being translated. Please refresh the page.')
