@@ -7,7 +7,7 @@ describe ('Spellcaster error-handling', () => {
         },
         fixture: 'spellObject1.json'
       });
-      cy.visit('http://localhost:3000/')
+      cy.visit('https://spellcaster-react.herokuapp.com/')
       cy.get('.load-error').should('have.text','The spellbook is still being translated. Please refresh the page.')
     });
 
@@ -19,7 +19,7 @@ describe ('Spellcaster error-handling', () => {
         },
         fixture: 'spellObject1.json'
       });
-      cy.visit('http://localhost:3000/')
+      cy.visit('https://spellcaster-react.herokuapp.com/')
       cy.get('.load-error').should('have.text','The spellbook is still being translated. Please refresh the page.')
     });
     it('Should see an error if the url does not exist and user can redirect to homepage', () => {
