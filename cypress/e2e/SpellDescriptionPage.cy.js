@@ -22,7 +22,7 @@ describe('Spell Description Page', () => {
       headers: {
         'x-requested-with': 'exampleClient',
       },
-      fixture: 'spellObject2'
+      fixture: 'spellObject2.json'
     });
     cy.visit('http://localhost:3000/')
     cy.get('#1').click()

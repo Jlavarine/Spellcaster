@@ -1,4 +1,4 @@
-describe ('Reaction Gallery error-handling', () => {
+describe ('Spellcaster error-handling', () => {
     it('Should see an error if fetch returns a 500 error', () => {
       cy.intercept('GET', 'https://www.dnd5eapi.co/api/spells', {
         statusCode: 500,
