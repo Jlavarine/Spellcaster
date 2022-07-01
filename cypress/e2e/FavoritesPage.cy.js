@@ -24,14 +24,14 @@ describe ('Spellcaster favorites page', () => {
       },
       fixture: 'spellObject2.json'
     });
-    cy.visit('http://localhost:3000/')
+    cy.visit('https://spellcaster-react.herokuapp.com/')
     cy.get('.spell-image').eq(0).click()
     cy.get('.favorite-btn').click()
     cy.get('.favorites-btn').click()
     });
 
     it('Should be able to visit the favorites page', () => {
-      cy.url('http://localhost:3000/favorites')
+      cy.url('https://spellcaster-react.herokuapp.com/favorites')
     });
 
     it('Should have a favorite spell', () => {
@@ -51,12 +51,12 @@ describe ('Spellcaster favorites page', () => {
 
     it('Should be able to go back to the home page', () => {
       cy.get('.home-btn').click()
-      cy.url('http://localhost:3000/')
+      cy.url('https://spellcaster-react.herokuapp.com/')
     });
 
     it('Should be able to favorite another spell', () => {
       cy.get('.home-btn').click()
-      cy.url('http://localhost:3000/')
+      cy.url('https://spellcaster-react.herokuapp.com/')
       cy.get('.spell-image').eq(1).click()
       cy.get('.favorite-btn').click()
       cy.get('.favorites-btn').click()
