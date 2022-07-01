@@ -1,4 +1,4 @@
-describe ('Reaction Gallery favorites page', () => {
+describe ('Spellcaster favorites page', () => {
   beforeEach(() => {
     cy.intercept('GET', 'https://www.dnd5eapi.co/api/spells', {
       statusCode: 200,
@@ -22,7 +22,7 @@ describe ('Reaction Gallery favorites page', () => {
       headers: {
         'x-requested-with': 'exampleClient',
       },
-      fixture: 'spellObject2'
+      fixture: 'SpellObject2'
     });
     cy.visit('http://localhost:3000/')
     cy.get('.spell-image').eq(0).click()
