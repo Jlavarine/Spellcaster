@@ -11,4 +11,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v4
         with:
-          start: npm start & wait-on https://spellcaster-react.herokuapp.com/
+          start: npm start & wait-on http://localhost:3000
+          spec: |
+          cypress/e2e/ErrorPage.cy.js
+          cypress/e2e/MainPage.cy.js

@@ -5,9 +5,9 @@ describe ('Spellcaster error-handling', () => {
         headers: {
           'x-requested-with': 'exampleClient',
         },
-        fixture: 'spellObject1.json'
+        fixture: 'spellObject1'
       });
-      cy.visit('https://spellcaster-react.herokuapp.com/')
+      cy.visit('http://localhost:3000/')
       cy.get('.load-error').should('have.text','The spellbook is still being translated. Please refresh the page.')
     });
 
@@ -17,9 +17,9 @@ describe ('Spellcaster error-handling', () => {
         headers: {
           'x-requested-with': 'exampleClient',
         },
-        fixture: 'spellObject1.json'
+        fixture: 'spellObject1'
       });
-      cy.visit('https://spellcaster-react.herokuapp.com/')
+      cy.visit('http://localhost:3000/')
       cy.get('.load-error').should('have.text','The spellbook is still being translated. Please refresh the page.')
     });
     it('Should see an error if the url does not exist and user can redirect to homepage', () => {
