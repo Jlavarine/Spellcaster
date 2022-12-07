@@ -6,7 +6,7 @@ Spellcaster is an application that allows a user to browse through a list of spe
 
 ## Deployed Page
 
-You can access deployed application [HERE!](https://spellcaster-react.herokuapp.com/)
+You can access deployed application [HERE!](https://spellcaster.vercel.app/)
 
 ## Technologies
 
